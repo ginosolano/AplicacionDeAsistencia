@@ -1,0 +1,102 @@
+﻿@using Registro.Data.Model
+@using FrontEnd.Models
+@model FrontEnd.Models.PersonalModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listaHorarios = (List<HorariosModel>)ViewBag.ListaHorarios;
+}
+@{
+    ViewBag.Title = "Personal";
+}
+@using (Html.BeginForm("SavePersonal", "Home", FormMethod.Post))
+{
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary " style="position:fixed;top:0;width:100%;background-color:cadetblue;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">Asistencia de personas</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./registros.html">Personas</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="reloj" id="clock" onload="currentTime()" style="margin-top: 60px; width: 300px;margin-left:600px"></div>
+            <script src="./reloj.js"></script>
+        </header>
+        <section id="registro" style="padding: 15px; height: 600px;">
+            <h1>Registro de Personas</h1>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="viewNombre" class="form-label">Nombre/s</label>
+                        <input type="text" class="form-control" id="viewNombre" name="viewNombre" style="border: 1px solid black;" required>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="viewApellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="viewApellido" name="viewApellido" style="border: 1px solid black;" required>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="viewDni" class="form-label">DNI</label>
+                        <input type="text" class="form-control" id="viewDni" name="viewDni" style="border: 1px solid black; " onkeypress="return soloNumeros(event)">
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="viewEmail" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="viewEmail" name="viewEmail" style="border: 1px solid black;" required>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="viewFechaNac" class="form-label">Fecha de nacimiento: </label>
+                        <input type="date"  class="form-control" id="viewFechaNac" name="viewFechaNac">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="viewIdHorario" class="form-label">Horario </label>
+                        <select class="form-select form-control"  aria-label="Default select example" id="viewIdHorario" name="viewIdHorario">
+                            <option selected>Seleccione el horario</option>
+                            @foreach (var item in listaHorarios)
+                            {
+                                @*<option value="@item.Id">@item.EntradaySalida</option>*@
+
+                                <option value="@item.Id"> @item.HorarioLegible</option>
+                            }
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="viewDomicilio" class="form-label">Domicilio</label>
+                        <input type="text" class="form-control" id="viewDomicilio" name="viewDomicilio" style="border: 1px solid black; required">
+
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Registrarme</button>
+                </div>
+            </form>
+        </section>
+    </body>
+}

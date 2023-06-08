@@ -1,0 +1,11 @@
+.reloj{
+    font-family: system-ui;
+     background: #f06f06; 
+     color: black; 
+     text-align: center;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

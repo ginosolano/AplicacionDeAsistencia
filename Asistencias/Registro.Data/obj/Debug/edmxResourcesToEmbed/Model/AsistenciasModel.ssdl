@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsistenciasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Horarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="hsEntrada" Type="int" Nullable="false" />
+    <Property Name="minEntrada" Type="int" Nullable="false" />
+    <Property Name="hsSalida" Type="int" Nullable="false" />
+    <Property Name="minSalida" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNac" Type="datetime" />
+    <Property Name="Foto" Type="image" />
+    <Property Name="Domicilio" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="DNI" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdHorario" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="RegistrosAsistencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdPersonal" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaHora" Type="datetime" />
+    <Property Name="Foto" Type="image" />
+    <Property Name="Movimiento" Type="char" MaxLength="10" />
+    <Property Name="IdHorario" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Personal_Horarios">
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="0..1" />
+    <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Horarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="IdHorario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosAsistencia_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+    <End Role="RegistrosAsistencia" Type="Self.RegistrosAsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegistrosAsistencia">
+        <PropertyRef Name="IdPersonal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AsistenciasModelStoreContainer">
+    <EntitySet Name="Horarios" EntityType="Self.Horarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistrosAsistencia" EntityType="Self.RegistrosAsistencia" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Personal_Horarios" Association="Self.FK_Personal_Horarios">
+      <End Role="Horarios" EntitySet="Horarios" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosAsistencia_Personal" Association="Self.FK_RegistrosAsistencia_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="RegistrosAsistencia" EntitySet="RegistrosAsistencia" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AsistenciasModelStoreContainer" CdmEntityContainer="Asistencias">
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="AsistenciasModel.Horarios">
+        <MappingFragment StoreEntitySet="Horarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="hsEntrada" ColumnName="hsEntrada" />
+          <ScalarProperty Name="minEntrada" ColumnName="minEntrada" />
+          <ScalarProperty Name="hsSalida" ColumnName="hsSalida" />
+          <ScalarProperty Name="minSalida" ColumnName="minSalida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personal">
+      <EntityTypeMapping TypeName="AsistenciasModel.Personal">
+        <MappingFragment StoreEntitySet="Personal">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistrosAsistencia">
+      <EntityTypeMapping TypeName="AsistenciasModel.RegistrosAsistencia">
+        <MappingFragment StoreEntitySet="RegistrosAsistencia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Movimiento" ColumnName="Movimiento" />
+          <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
