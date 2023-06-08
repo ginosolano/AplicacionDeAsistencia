@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsistenciasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Horarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="hsEntrada" Type="Int32" Nullable="false" />
+    <Property Name="minEntrada" Type="Int32" Nullable="false" />
+    <Property Name="hsSalida" Type="Int32" Nullable="false" />
+    <Property Name="minSalida" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Horarios" FromRole="Horarios" ToRole="Personal" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FechaNac" Type="DateTime" Precision="3" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Domicilio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdHorario" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK_Personal_Horarios" FromRole="Personal" ToRole="Horarios" />
+    <NavigationProperty Name="RegistrosAsistencia" Relationship="Self.FK_RegistrosAsistencia_Personal" FromRole="Personal" ToRole="RegistrosAsistencia" />
+  </EntityType>
+  <EntityType Name="RegistrosAsistencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="IdPersonal" Type="Guid" Nullable="false" />
+    <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Movimiento" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="IdHorario" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Personal" Relationship="Self.FK_RegistrosAsistencia_Personal" FromRole="RegistrosAsistencia" ToRole="Personal" />
+  </EntityType>
+  <Association Name="FK_Personal_Horarios">
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="1" />
+    <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Horarios">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="IdHorario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistrosAsistencia_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+    <End Role="RegistrosAsistencia" Type="Self.RegistrosAsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RegistrosAsistencia">
+        <PropertyRef Name="IdPersonal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Asistencias" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Horarios" EntityType="Self.Horarios" />
+    <EntitySet Name="Personal" EntityType="Self.Personal" />
+    <EntitySet Name="RegistrosAsistencia" EntityType="Self.RegistrosAsistencia" />
+    <AssociationSet Name="FK_Personal_Horarios" Association="Self.FK_Personal_Horarios">
+      <End Role="Horarios" EntitySet="Horarios" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistrosAsistencia_Personal" Association="Self.FK_RegistrosAsistencia_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="RegistrosAsistencia" EntitySet="RegistrosAsistencia" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

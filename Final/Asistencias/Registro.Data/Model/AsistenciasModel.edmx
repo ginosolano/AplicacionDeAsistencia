@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AsistenciasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Horarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="hsEntrada" Type="int" Nullable="false" />
+          <Property Name="minEntrada" Type="int" Nullable="false" />
+          <Property Name="hsSalida" Type="int" Nullable="false" />
+          <Property Name="minSalida" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" />
+          <Property Name="FechaNac" Type="datetime" />
+          <Property Name="Foto" Type="image" />
+          <Property Name="Domicilio" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="DNI" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdHorario" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="RegistrosAsistencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IdPersonal" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" />
+          <Property Name="Foto" Type="image" />
+          <Property Name="Movimiento" Type="char" MaxLength="10" />
+          <Property Name="IdHorario" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Personal_Horarios">
+          <End Role="Horarios" Type="Self.Horarios" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdHorario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrosAsistencia_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+          <End Role="RegistrosAsistencia" Type="Self.RegistrosAsistencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrosAsistencia">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AsistenciasModelStoreContainer">
+          <EntitySet Name="Horarios" EntityType="Self.Horarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrosAsistencia" EntityType="Self.RegistrosAsistencia" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Personal_Horarios" Association="Self.FK_Personal_Horarios">
+            <End Role="Horarios" EntitySet="Horarios" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrosAsistencia_Personal" Association="Self.FK_RegistrosAsistencia_Personal">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="RegistrosAsistencia" EntitySet="RegistrosAsistencia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AsistenciasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Horario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="hsEntrada" Type="Int32" Nullable="false" />
+          <Property Name="minEntrada" Type="Int32" Nullable="false" />
+          <Property Name="hsSalida" Type="Int32" Nullable="false" />
+          <Property Name="minSalida" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Personals" Relationship="Self.FK_Personal_Horarios" FromRole="Horarios" ToRole="Personal" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaNac" Type="DateTime" Precision="3" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Domicilio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IdHorario" Type="Guid" />
+          <NavigationProperty Name="Horario" Relationship="Self.FK_Personal_Horarios" FromRole="Personal" ToRole="Horarios" />
+          <NavigationProperty Name="RegistrosAsistencias" Relationship="Self.FK_RegistrosAsistencia_Personal" FromRole="Personal" ToRole="RegistrosAsistencia" />
+        </EntityType>
+        <EntityType Name="RegistrosAsistencia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="IdPersonal" Type="Guid" Nullable="false" />
+          <Property Name="FechaHora" Type="DateTime" Precision="3" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Movimiento" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="IdHorario" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK_RegistrosAsistencia_Personal" FromRole="RegistrosAsistencia" ToRole="Personal" />
+        </EntityType>
+        <Association Name="FK_Personal_Horarios">
+          <End Role="Horarios" Type="Self.Horario" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdHorario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrosAsistencia_Personal">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+          <End Role="RegistrosAsistencia" Type="Self.RegistrosAsistencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrosAsistencia">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AsistenciasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Horarios" EntityType="Self.Horario" />
+          <EntitySet Name="Personals" EntityType="Self.Personal" />
+          <EntitySet Name="RegistrosAsistencias" EntityType="Self.RegistrosAsistencia" />
+          <AssociationSet Name="FK_Personal_Horarios" Association="Self.FK_Personal_Horarios">
+            <End Role="Horarios" EntitySet="Horarios" />
+            <End Role="Personal" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrosAsistencia_Personal" Association="Self.FK_RegistrosAsistencia_Personal">
+            <End Role="Personal" EntitySet="Personals" />
+            <End Role="RegistrosAsistencia" EntitySet="RegistrosAsistencias" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AsistenciasModelStoreContainer" CdmEntityContainer="AsistenciasEntities">
+          <EntitySetMapping Name="Horarios">
+            <EntityTypeMapping TypeName="AsistenciasModel.Horario">
+              <MappingFragment StoreEntitySet="Horarios">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="hsEntrada" ColumnName="hsEntrada" />
+                <ScalarProperty Name="minEntrada" ColumnName="minEntrada" />
+                <ScalarProperty Name="hsSalida" ColumnName="hsSalida" />
+                <ScalarProperty Name="minSalida" ColumnName="minSalida" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals">
+            <EntityTypeMapping TypeName="AsistenciasModel.Personal">
+              <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="FechaNac" ColumnName="FechaNac" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrosAsistencias">
+            <EntityTypeMapping TypeName="AsistenciasModel.RegistrosAsistencia">
+              <MappingFragment StoreEntitySet="RegistrosAsistencia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Movimiento" ColumnName="Movimiento" />
+                <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

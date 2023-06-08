@@ -1,0 +1,172 @@
+C:\Users\mani-\source\repos\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.AssemblyReference.cache
+C:\Users\mani-\source\repos\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CoreCompileInputs.cache
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CoreCompileInputs.cache
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.dll.config
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.pdb
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Buffers.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Collections.Immutable.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Memory.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Buffers.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Collections.Immutable.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Memory.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CopyComplete
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.dll
+C:\Users\CASTILLO\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.pdb
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.dll.config
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.pdb
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Buffers.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Collections.Immutable.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Memory.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Buffers.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Collections.Immutable.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Memory.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CoreCompileInputs.cache
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CopyComplete
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.dll
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.pdb
+C:\Users\ginoi\Desktop\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.AssemblyReference.cache
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.dll.config
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Registro.Data.pdb
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Buffers.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Collections.Immutable.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Memory.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Buffers.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Collections.Immutable.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Memory.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.AssemblyReference.cache
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CoreCompileInputs.cache
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.csproj.CopyComplete
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.dll
+C:\Users\CASTILLO\Desktop\proyecto final terminado\Final\Asistencias\Registro.Data\obj\Debug\Registro.Data.pdb

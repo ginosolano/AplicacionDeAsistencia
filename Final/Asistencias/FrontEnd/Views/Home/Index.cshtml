@@ -1,0 +1,175 @@
+﻿@using FrontEnd.Models
+@model FrontEnd.Models.RegistroModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("SaveRegistroAsistencia", "Home", FormMethod.Post))
+{
+    <body>
+        <!--***********************RELOJ DE REGISTRO DE ENTRADA****************************-->
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4"></div>
+
+                <div class="col-md-4 reloj " id="clock" onload="currentTime()" style="font-family: system-ui; background-color: darkseagreen ; color: black; text-align: center; display: flex; justify-content: center; align-items: center;"></div>
+                <script src="~/Scripts/reloj.js"></script>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="titulo" style="display: flex; justify-content: center; align-items: center;">
+            <h1>Registro de Asistencias</h1>
+        </div>
+
+
+        <!--************************CAMARA E IMAGEN*********************-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <video src="" id="videoElement" autoplay style=" width: 320px; height: 320px;"></video>
+                    <canvas id="canvasElement" style="display: none;"></canvas>
+
+
+                </div>
+                <div class="col-md-6">
+
+                    <img id="fotografia" src="~/Fotos/usuario.png" alt="fOTO" style="margin-top:35px ;width:320px; height:245px;" />
+                </div>
+            </div>
+        </div>
+        <!--************************INGRESO DE DNI****************************-->
+        <div class="row" id="inicio" style="padding: 15px; width: 100%; ">
+            <div class="col-12">
+
+                <div class="row g-3">
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <div class="col-4">
+                                    <input id="txtdni" name="txtdni" class=" form-control me-2" type="search" placeholder="Ingrese su DNI" aria-label="Search"
+                                           onkeypress="return soloNumeros(event)">
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+
+
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="button" class="btn btn-primary" id="liveAlertBtn" onclick="actualizar()">Cargar otro Registro </button>
+                    <button class="btn btn-primary" type="submit">Prueba</button>
+                </div>
+            </div>
+        </div>
+        <!--**********************************************************************************-->
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <!--+++++++++++++++++++++SCRIPTS+++++++++++++++++++++++++++++++++++++-->
+        <script>
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const appendAlert = (message, type) => {
+                const wrapper = document.createElement('div')
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <buttoon type="buttn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('')
+
+                alertPlaceholder.append(wrapper)
+            }
+
+            const alertTrigger = document.getElementById('txtdni')
+            let text = document.getElementById('txtdni').value;
+
+            var fecha = new Date();
+
+            var fechaActual = fecha.toLocaleDateString();
+            var horaActual = fecha.toLocaleTimeString();
+
+            if (alertTrigger) {
+
+                alertTrigger.addEventListener('change', () => {
+                    $('#txtdni').attr('readonly', true);
+                    if (fecha.getHours() <= 8) {
+                        if (fecha.getMinutes() <= 31) {
+                            appendAlert('¡Asistencia registrada con exito!' + " " + fechaActual + " " + horaActual)
+                        }
+                    }
+                    else {
+                        appendAlert('¡Asistencia registrada con exito! TARDANZA!!!!!' + " " + fechaActual + " " + horaActual)
+                    }
+
+                })
+            }
+
+            /*
+            ////////////****************************
+            $('#txtdni').on('change', function () {
+                var fecha = new Date();
+
+                var fechaActual = fecha.toLocaleDateString();
+                var horaActual = fecha.toLocaleTimeString();
+                var nombre = fecha.toLocaleTimeString();
+                var apellido = fecha.toLocaleTimeString();
+
+                if (horaActual <= "8:30:00") {
+                    alert("¡Asistencia registrada con exito!" + " " + fechaActual + " " + horaActual);
+                } else {
+                    alert("¡Asistencia registrada con exito! TARDANZA!!!!!" + " " + fechaActual + " " + horaActual);
+                }
+                // document.getElementById('<%=txtnombre %>').innerHTML = nombre;
+            });*/
+            var videoElement = document.getElementById('videoElement');
+            var captureButton = document.getElementById('captureButton');
+            var canvasElement = document.getElementById('canvasElement');
+            var context = canvasElement.getContext('2d');
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    videoElement.srcObject = stream;
+                })
+                .catch(function (error) {
+                    alert("¡Error de acceso a camara web!");
+                });
+
+
+            txtdni.addEventListener('change', function () {
+                canvasElement.width = videoElement.videoWidth;
+                canvasElement.height = videoElement.videoHeight;
+
+
+                context.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
+
+                var imageDataURL = canvasElement.toDataURL('image/png');
+                let fotografia = document.getElementById("fotografia");
+                fotografia.src = imageDataURL;
+
+
+
+            });
+        </script>
+
+        <script>
+            function soloNumeros(event) {
+                var charCode = event.which ? event.which : event.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    event.preventDefault();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+        <script>
+            function actualizar() {
+                location.reload(true)
+            }
+        </script>
+    </body>
+}
